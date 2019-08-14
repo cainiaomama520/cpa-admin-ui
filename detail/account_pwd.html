@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+		<!--<link rel="shortcut icon" href="../img/icon.png" type="image/x-icon">-->
+		<!-- Bootstrap 3.3.6 -->
+		<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/jquery.shCircleLoader.css" />
+		<link rel="stylesheet" type="text/css" href="../css/AdminLTE.min.css" />
+		<link rel="stylesheet" href="../css/_all-skins.min.css">
+		<!--daterangepicker-->
+		<link rel="stylesheet" type="text/css" href="../css/daterangepicker.css" />
+		<!-- DataTables -->
+		<link rel="stylesheet" href="../css/dataTables.bootstrap.css">
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="../font_al/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../css/main.css" />
+		<style type="text/css">
+			/*.loadingBox { width: 100%;height: 100%; margin: 0 auto;position: absolute;top:0;left: 0;background: rgba(0,0,0,0.5); z-index:100; }
+			.loading { width: 152px; height: 152px; margin: 0 auto; position: absolute;top: 50%;left: 0;right: 0;bottom: 50%;}*/
+		</style>
+	</head>
+
+	<body class="hold-transition skin-blue sidebar-mini fixed">
+		<div class="wrapper">
+			<header class="main-header">
+				<!-- Logo -->
+				<a href="#" class="logo">
+					<!-- mini logo for sidebar mini 50x50 pixels -->
+					<span class="logo-mini"><b>M</b>ex</span>
+					<!-- logo for regular state and mobile devices -->
+					<span class="logo-lg"><b>Mobi</b> Exchanger</span>
+				</a>
+				<!-- Header Navbar: style can be found in header.less -->
+				<nav class="navbar navbar-static-top">
+					<!-- Sidebar toggle button-->
+					<a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+						<span class="sr-only">Toggle navigation</span>
+					</a>
+					<div class="navbar-custom-menu">
+						<ul class="nav navbar-nav">
+							<li id="token" style="display:none;"></li>
+							<!-- User Account: style can be found in dropdown.less -->
+							<li class="dropdown user user-menu">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:#fff;">
+									<span class="userName">Admin</span>
+									<b class="caret"></b>
+								</a>
+								<ul class="dropdown-menu">
+									<!--<li>
+										<a href="#" class="accountLink" style="font-family: '微软雅黑';">详情</a>
+									</li>-->
+									<li>
+										<a href="#" class="logout" style="font-family: '微软雅黑';">Log out</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</header>
+			<aside class="main-sidebar">
+				<!-- sidebar: style can be found in sidebar.less -->
+				<section class="sidebar">
+					<!-- sidebar menu: : style can be found in sidebar.less -->
+					<ul class="sidebar-menu">
+
+					</ul>
+				</section>
+			</aside>
+			<div class="content-wrapper">
+				<!--<div class="loadingBox">
+		            <div class="loading"></div>
+		        </div>-->
+				<!-- Content Header (Page header) -->
+				<section class="content-header">
+					<h1>
+			       	<i class="iconfont icon-biaoqian" style="color: #018db7;margin-right: 10px;"></i>
+			        	<span>Password Setting</span>
+			     </h1>
+				</section>
+				<!-- Main content -->
+				<section class="content">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="box">
+								<!-- /.box-header -->
+								<!-- form start -->
+								<form class="form-horizontal">
+									<div class="box-body">
+										<div class="form-group accountPwdBox">
+											<label class="control-label col-lg-3 col-md-4 col-sm-12">
+											<span class="text-red">*</span>Original Password :
+										</label>
+											<div class="col-lg-2 col-md-3 col-sm-12">
+												<input type="password" class="form-control" id="accountPwd" data-required="true" data-check="pwd">
+											</div>
+											<p class="oldPwd" style="color:#FF0000;line-height: 34px;display: none;font-size: 15px;">The original password is incorrect.</p>
+										</div>
+
+										<div class="form-group">
+											<label class="control-label col-lg-3 col-md-4 col-sm-12">
+											<span class="text-red">*</span>New Password :
+										</label>
+											<div class="col-lg-2 col-md-3 col-sm-12">
+												<input type="password" class="form-control" id="newPwd" data-required="true" data-check="pwd">
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="control-label col-lg-3 col-md-4 col-sm-12">
+											<span class="text-red">*</span>New Password Confirmation :
+										</label>
+											<div class="col-lg-2 col-md-3 col-sm-12">
+												<input type="password" class="form-control" id="aginPwd" data-required="true" data-check="pwd">
+											</div>
+											<p class="newPwd" style="color:#FF0000;line-height: 34px;display: none;font-size: 15px;">Two input inconsistencies, please re-enter.</p>
+										</div>
+										<div class="form-group">
+											<div class="col-lg-2 col-md-3 col-sm-12 col-lg-offset-2">
+												<a type="button" class="btn btn-primary btn-w-m" id="buy">Save</a>
+											</div>
+										</div>
+									</div>
+									<!-- /.box-footer -->
+								</form>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+		<!--Import jQuery before materialize.js-->
+		<script type="text/javascript" src="../js/jquery-2.2.3.min.js"></script>
+		<!-- Bootstrap 3.3.6 -->
+		<script src="../bootstrap/js/bootstrap.min.js"></script>
+		<script src="../js/jquery.shCircleLoader-min.js" type="text/javascript" charset="utf-8"></script>
+		<!--daterangepicker-->
+		<script src="../js/moment.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/daterangepicker.js" type="text/javascript" charset="utf-8"></script>
+		<!-- DataTables -->
+		<script src="../js/jquery.dataTables.min.js"></script>
+		<script src="../js/dataTables.bootstrap.min.js"></script>
+		<!-- AdminLTE App -->
+		<script src="../js/app.min.js"></script>
+		<script src="../js/jquery.slimscroll.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/style.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/ajax.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="account_pwd.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script type="text/javascript">
+			$('.loading').shCircleLoader();
+        </script>-->
+	</body>
+
+</html>

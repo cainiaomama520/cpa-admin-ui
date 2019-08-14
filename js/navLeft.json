@@ -1,0 +1,41 @@
+{
+	"functionObj": [
+		{
+			"functionName": "Dashboard",
+			"functionUrl": "../detail/index.html",
+			"iconUrl": "icon-home",
+			"functionNestedObj": []
+		}, {
+			"functionName": "Offer list",
+			"functionUrl": "../detail/offer_list.html",
+			"iconUrl": "icon-dingdan1",
+			"functionNestedObj": []
+		}, {
+			"functionName": "Report",
+			"functionUrl": "#",
+			"iconUrl": "icon-baobiao",
+			"functionNestedObj": [
+				{
+					"functionName": "Data report",
+					"functionUrl": "../detail/report_whole.html",
+					"iconUrl": "icon-yuanquan"
+				}
+			]
+		}, {
+			"functionName": "Account",
+			"functionUrl": "#",
+			"iconUrl": "icon-zhanghu",
+			"functionNestedObj": [
+				{
+					"functionName": "Information",
+					"functionUrl": "../detail/account_info.html",
+					"iconUrl": "icon-yuanquan"
+				},{
+					"functionName": "Password setting",
+					"functionUrl": "../detail/account_pwd.html",
+					"iconUrl": "icon-yuanquan"
+				}
+			]
+		}
+	]
+}
